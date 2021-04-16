@@ -1,0 +1,6 @@
+name: pyspark-bundle
+channels:
+  - defaults
+dependencies:
+  - python=3.7.3
+  - pip
