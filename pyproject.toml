@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pyspark-bundle"
-version = "0.8.0b1"
+version = "0.8.0b2"
 description = "PySpark bundle for the Daipe Framework"
 readme = "README.md"
 repository = "https://github.com/daipe-ai/pyspark-bundle"
