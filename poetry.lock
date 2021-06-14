@@ -79,7 +79,7 @@ colorama = {version = "*", markers = "sys_platform == \"win32\""}
 
 [[package]]
 name = "daipe-core"
-version = "0.8.0b1"
+version = "1.0.0"
 description = "Daipe framework core"
 category = "main"
 optional = false
@@ -447,7 +447,7 @@ testing = ["jaraco.itertools", "func-timeout"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "527cccbf3e3e584c76202062629ceb3d484f6b5f6dcbd8be5fd933eea3156fcb"
+content-hash = "e96eef7d57046c70dfb3095bcd282ec7c0e72d82404f2bb74766ce11b04c76f7"
 
 [metadata.files]
 appdirs = [
@@ -478,7 +478,7 @@ colorlog = [
     {file = "colorlog-4.8.0.tar.gz", hash = "sha256:59b53160c60902c405cdec28d38356e09d40686659048893e026ecbd589516b1"},
 ]
 daipe-core = [
-    {file = "daipe_core-0.8.0b1-py3-none-any.whl", hash = "sha256:faded98345ab787e4b782addcd17b051f6087d9322bcd5a30925e22dafbc6805"},
+    {file = "daipe_core-1.0.0-py3-none-any.whl", hash = "sha256:157cdf48add2906584770f898b7473732e730e542d240e68abbde75a1ce1ba3a"},
 ]
 flake8 = [
     {file = "flake8-3.9.0-py2.py3-none-any.whl", hash = "sha256:12d05ab02614b6aee8df7c36b97d1a3b2372761222b19b58621355e82acddcff"},
