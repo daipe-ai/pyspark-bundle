@@ -7,7 +7,7 @@ from pysparkbundle.read.PathReader import PathReader
 @input_decorator_function
 def read_csv(path: str, schema: StructType = None, options: dict = None):
     def wrapper(container: ContainerInterface):
-        path_reader: PathReader = container.get("pysparkbundle.read.PathReader.csv")
+        path_reader: PathReader = container.get("pysparkbundle.csv.reader")
 
         return path_reader.read(path, schema, options)
 

@@ -5,4 +5,4 @@ from pysparkbundle.write.PathWriterDecorator import PathWriterDecorator
 @DecoratedDecorator
 class delta_overwrite(PathWriterDecorator):  # noqa: N801
     _mode = "overwrite"
-    _writer_service = "pysparkbundle.write.PathWriter.delta"
+    _writer_service = "pysparkbundle.delta.writer"
