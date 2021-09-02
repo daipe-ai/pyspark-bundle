@@ -7,7 +7,7 @@ from pysparkbundle.read.PathReader import PathReader
 @input_decorator_function
 def read_delta(path: str, schema: StructType = None, options: dict = None):
     def wrapper(container: ContainerInterface):
-        path_reader: PathReader = container.get("pysparkbundle.read.PathReader.delta")
+        path_reader: PathReader = container.get("pysparkbundle.delta.reader")
 
         return path_reader.read(path, schema, options)
 

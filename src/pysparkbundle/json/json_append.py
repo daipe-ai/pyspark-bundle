@@ -5,4 +5,4 @@ from pysparkbundle.write.PathWriterDecorator import PathWriterDecorator
 @DecoratedDecorator
 class json_append(PathWriterDecorator):  # noqa: N801
     _mode = "append"
-    _writer_service = "pysparkbundle.write.PathWriter.json"
+    _writer_service = "pysparkbundle.json.writer"

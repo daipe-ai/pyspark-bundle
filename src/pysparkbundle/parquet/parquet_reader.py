@@ -7,7 +7,7 @@ from pysparkbundle.read.PathReader import PathReader
 @input_decorator_function
 def read_parquet(path: str, schema: StructType = None, options: dict = None):
     def wrapper(container: ContainerInterface):
-        path_reader: PathReader = container.get("pysparkbundle.read.PathReader.parquet")
+        path_reader: PathReader = container.get("pysparkbundle.parquet.reader")
 
         return path_reader.read(path, schema, options)
 
