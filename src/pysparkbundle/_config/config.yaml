@@ -8,6 +8,10 @@ parameters:
 services:
   pysparkbundle.logger: '@daipecore.logger'
 
+  pysparkbundle.lineage.argument.ArgumentMapping:
+    tags:
+      - 'lineage.decorator.function.argument_mapping'
+
   pysparkbundle.dataframe.DataFrameShowMethod:
     tags:
       - {name: 'pysparkbundle.dataframe.show_method', alias: dataframe_show}
