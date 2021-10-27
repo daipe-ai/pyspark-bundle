@@ -6,6 +6,7 @@ from injecta.service.ServiceAlias import ServiceAlias
 from injecta.service.argument.PrimitiveArgument import PrimitiveArgument
 from injecta.service.argument.ServiceArgument import ServiceArgument
 from pyfonybundles.Bundle import Bundle
+from daipecore.detector import is_cli
 from pysparkbundle.lineage.PathWriterParser import PathWriterParser
 from pysparkbundle.read.PathReader import PathReader
 from pysparkbundle.write.PathWriter import PathWriter
@@ -22,6 +23,11 @@ class PySparkBundle(Bundle):
         ]
 
         return services + path_readers + path_writers + decorator_parsers, aliases
+
+    def modify_parameters(self, parameters: Box) -> Box:
+        if is_cli():
+            parameters.pysparkbundle.dataframe.show_method = "dataframe_show"
+        return parameters
 
     def __create_path_reader(self, format_name: str):
         return Service(
