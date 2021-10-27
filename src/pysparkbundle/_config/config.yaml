@@ -3,7 +3,7 @@ parameters:
     filesystem:
 
     dataframe:
-      show_method: dataframe_show
+      show_method: # Default is None, is set based on running environment
 
 services:
   pysparkbundle.logger: '@daipecore.logger'
