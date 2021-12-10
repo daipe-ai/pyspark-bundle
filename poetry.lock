@@ -93,7 +93,7 @@ python-dotenv = ">=0.13.0,<1.0.0"
 
 [[package]]
 name = "daipe-core"
-version = "1.2.0"
+version = "1.2.2"
 description = "Daipe framework core"
 category = "main"
 optional = false
@@ -517,7 +517,7 @@ testing = ["jaraco.itertools", "func-timeout"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "d0e9c0efb3b5094ec87b1a896af435d9a8efc2b3483e38536eb7e3021cf6c7f7"
+content-hash = "60ea10f088ee18fe15f4a542736faf1b62c3c20b3026aa0ae4366eff3b609b9f"
 
 [metadata.files]
 appdirs = [
@@ -551,7 +551,7 @@ console-bundle = [
     {file = "console_bundle-0.5.1-py3-none-any.whl", hash = "sha256:bf9ffa3bc530754111dc18b50a78d25d6532c763628cc19c028acb9e170ec3b0"},
 ]
 daipe-core = [
-    {file = "daipe_core-1.2.0-py3-none-any.whl", hash = "sha256:2f0048fc19f7cb21b849076b8f1ffb1ebbd6dacf15ec23954cd7d422b5012f30"},
+    {file = "daipe_core-1.2.2-py3-none-any.whl", hash = "sha256:9e0562900134557f12a4f03a9fe31c5183391704f687715e0c105d71ed0154ab"},
 ]
 flake8 = [
     {file = "flake8-3.9.0-py2.py3-none-any.whl", hash = "sha256:12d05ab02614b6aee8df7c36b97d1a3b2372761222b19b58621355e82acddcff"},
