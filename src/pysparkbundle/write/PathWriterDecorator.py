@@ -1,6 +1,7 @@
 from typing import Union
 from pysparkbundle.write.PathWriter import PathWriter
 from daipecore.decorator.OutputDecorator import OutputDecorator
+from daipecore.function import arguments_transformer
 from injecta.container.ContainerInterface import ContainerInterface
 from pyspark.sql import DataFrame
 
@@ -25,5 +26,7 @@ class PathWriterDecorator(OutputDecorator):  # noqa: N801
         self.__options = options
 
     def process_result(self, result: DataFrame, container: ContainerInterface):
+        transformed_path = arguments_transformer.transform(self.__path, container.get_parameters())
+
         path_writer: PathWriter = container.get(self._writer_service)
-        path_writer.write(result, self.__path, self._mode, self.__partition_by, self.__options)
+        path_writer.write(result, transformed_path, self._mode, self.__partition_by, self.__options)
