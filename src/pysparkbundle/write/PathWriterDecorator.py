@@ -26,7 +26,7 @@ class PathWriterDecorator(OutputDecorator):  # noqa: N801
         self.__options = options
 
     def process_result(self, result: DataFrame, container: ContainerInterface):
-        transformed_path = arguments_transformer.transform(self.__path, container.get_parameters())
+        transformed_path = arguments_transformer.transform(self.__path, container)
 
         path_writer: PathWriter = container.get(self._writer_service)
         path_writer.write(result, transformed_path, self._mode, self.__partition_by, self.__options)
