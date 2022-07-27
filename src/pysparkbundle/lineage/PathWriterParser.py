@@ -9,9 +9,9 @@ class PathWriterParser(DecoratorParserInterface):
         self.__mode = mode
 
     def parse(self, decorator: _ast.Call):
-        arg: _ast.Str = decorator.args[0]  # pyre-ignore[9]
+        arg: _ast.Str = decorator.args[0]  # pylint: disable=no-member # pyre-ignore[11]
 
-        return PathWriter(arg.s, self.__mode)
+        return PathWriter(arg.s, self.__mode)  # pyre-ignore[16]
 
     def get_name(self) -> str:
         return self.__name
