@@ -9,7 +9,15 @@ from pyspark.sql import functions as f
 class PySparkTestCase(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.spark = SparkSession.builder.master("local[1]").appName("PySparkTest").getOrCreate()
+        cls.spark = (
+            SparkSession.builder.master("local[1]")
+            .config("spark.jars.packages", "io.delta:delta-core_2.12:1.2.1")
+            .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension")
+            .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog")
+            .enableHiveSupport()
+            .appName("PySparkTest")
+            .getOrCreate()
+        )
         cls.sc = cls.spark.sparkContext  # noqa
 
         warnings.filterwarnings("ignore", category=RuntimeWarning)
